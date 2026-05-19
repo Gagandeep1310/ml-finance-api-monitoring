@@ -1,4 +1,4 @@
-# 🚀 Invoice Payment Prediction API with Real-Time Monitoring
+# Invoice Payment Prediction API with Real-Time Monitoring
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)](https://fastapi.tiangolo.com/)
@@ -11,13 +11,13 @@ Perfect portfolio project demonstrating end-to-end ML deployment skills for **Fi
 
 ---
 
-## 📋 Overview
+## Overview
 
 This project implements a **production-grade ML API** that predicts whether customers will pay invoices on time. It helps companies:
-* 💰 **Improve cash flow** by identifying risky invoices early
-* 📈 **Prioritize collections** efforts on high-risk accounts  
-* 🎯 **Reduce late payments** through proactive customer outreach
-* 📊 **Optimize working capital** with better payment forecasting
+* **Improve cash flow** by identifying risky invoices early
+* **Prioritize collections** efforts on high-risk accounts  
+* **Reduce late payments** through proactive customer outreach
+* **Optimize working capital** with better payment forecasting
 
 ### Business Impact
 
@@ -27,26 +27,26 @@ This project implements a **production-grade ML API** that predicts whether cust
 
 ---
 
-## ✨ Features
+## Features
 
 ### ML Capabilities
-- 🤖 Random Forest classifier with 90%+ accuracy
-- 📊 12 financial features (amount, credit score, payment history, etc.)
-- ⚖️ SMOTE for handling imbalanced datasets
-- 📈 MLflow experiment tracking and model versioning
-- 🎯 Real-time prediction API with <50ms latency
-- 💡 Risk categorization (LOW/MEDIUM/HIGH)
-- 🎬 Actionable recommendations (when to follow up, escalate, etc.)
+- Random Forest classifier with 90%+ accuracy
+- 12 financial features (amount, credit score, payment history, etc.)
+- SMOTE for handling imbalanced datasets
+- MLflow experiment tracking and model versioning
+- Real-time prediction API with <50ms latency
+- Risk categorization (LOW/MEDIUM/HIGH)
+- Actionable recommendations (when to follow up, escalate, etc.)
 
 ### Production Features
-- 🚀 FastAPI with automatic OpenAPI docs
-- 🔍 Request/response validation with Pydantic
-- 📊 Prometheus metrics exportation
-- 📈 Grafana dashboards for visualization
-- 💾 PostgreSQL for prediction logging
-- 🐳 Multi-container Docker setup
-- 🏥 Health checks and monitoring
-- 🔄 CI/CD pipeline with GitHub Actions
+- FastAPI with automatic OpenAPI docs
+- Request/response validation with Pydantic
+- Prometheus metrics exportation
+- Grafana dashboards for visualization
+- PostgreSQL for prediction logging
+- Multi-container Docker setup
+- Health checks and monitoring
+- CI/CD pipeline with GitHub Actions
 
 ### Monitoring Metrics
 - Total predictions count
@@ -58,7 +58,7 @@ This project implements a **production-grade ML API** that predicts whether cust
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -73,44 +73,44 @@ This project implements a **production-grade ML API** that predicts whether cust
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.11+
 - Docker & Docker Compose
 - Git
 
-### 1️⃣ Clone and Install
+### 1️. Clone and Install
 ```bash
 cd ml-api-monitoring
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Train the Model
+### 2️. Train the Model
 ```bash
 python train.py
 ```
 Creates model artifacts in `models/` folder (~30 seconds)
 
-### 3️⃣ Start All Services
+### 3️. Start All Services
 ```bash
 docker-compose up -d
 ```
 
 This starts:
-- ✅ ML API on http://localhost:8000
-- ✅ PostgreSQL on port 5432
-- ✅ Prometheus on http://localhost:9090
-- ✅ Grafana on http://localhost:3000
+- ML API on http://localhost:8000
+- PostgreSQL on port 5432
+- Prometheus on http://localhost:9090
+- Grafana on http://localhost:3000
 
-### 4️⃣ Test the API
+### Test the API
 ```bash
 python test_api.py
 ```
 
 ---
 
-## 📚 API Documentation
+## API Documentation
 
 ### Interactive Docs
 - **Swagger UI:** http://localhost:8000/docs
@@ -152,7 +152,7 @@ curl -X POST http://localhost:8000/predict \
 
 ---
 
-## 📊 Monitoring
+## Monitoring
 
 ### Grafana Dashboard
 **URL:** http://localhost:3000 (admin/admin123)
@@ -183,7 +183,7 @@ FROM predictions;
 
 ---
 
-## 🎓 Use Cases
+## Use Cases
 
 This API is perfect for:
 * **B2B SaaS companies** - Predict subscription payment delays
@@ -194,7 +194,7 @@ This API is perfect for:
 
 ---
 
-## 📈 Model Features
+## Model Features
 
 The model uses 12 features to predict payment behavior:
 
@@ -213,7 +213,7 @@ The model uses 12 features to predict payment behavior:
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 ### Deploy to Render (Free)
 1. Push to GitHub
@@ -225,7 +225,7 @@ Full deployment guides in the documentation.
 
 ---
 
-## 💡 Business Value
+## Business Value
 
 **For Finance Teams:**
 * Reduce Days Sales Outstanding (DSO)
@@ -247,14 +247,14 @@ Full deployment guides in the documentation.
 
 ---
 
-## 🎯 Portfolio Impact
+## Portfolio Impact
 
 This project demonstrates:
-✅ **Finance domain knowledge** (payments, credit, collections)  
-✅ **Production ML deployment** (not just notebooks)  
-✅ **Full-stack MLOps** (training → API → monitoring)  
-✅ **Business-focused AI** (clear ROI and actionable outputs)  
-✅ **Scalable architecture** (containerized, cloud-ready)
+**Finance domain knowledge** (payments, credit, collections)  
+**Production ML deployment** (not just notebooks)  
+**Full-stack MLOps** (training → API → monitoring)  
+**Business-focused AI** (clear ROI and actionable outputs)  
+**Scalable architecture** (containerized, cloud-ready)
 
 **Perfect for roles in:**
 * ML Engineer (Finance/FinTech)
@@ -265,16 +265,16 @@ This project demonstrates:
 
 ---
 
-## 📝 Resume Bullets
+## Resume Bullets
 
-✅ "Deployed production ML API for invoice payment prediction, improving cash flow forecasting accuracy by 30%"  
-✅ "Built end-to-end MLOps pipeline with FastAPI, Docker, Prometheus achieving <50ms latency at 100+ req/s"  
-✅ "Designed predictive model for accounts receivable with 90%+ accuracy using Python and scikit-learn"  
-✅ "Implemented real-time monitoring dashboards with Grafana tracking 10K+ daily predictions"  
+"Deployed production ML API for invoice payment prediction, improving cash flow forecasting accuracy by 30%"  
+"Built end-to-end MLOps pipeline with FastAPI, Docker, Prometheus achieving <50ms latency at 100+ req/s"  
+"Designed predictive model for accounts receivable with 90%+ accuracy using Python and scikit-learn"  
+"Implemented real-time monitoring dashboards with Grafana tracking 10K+ daily predictions"  
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Areas to expand:
 - Add more features (seasonal patterns, geographic data)
@@ -285,7 +285,7 @@ Contributions welcome! Areas to expand:
 
 ---
 
-## 📚 Learn More
+## Learn More
 
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [MLflow Documentation](https://mlflow.org/docs/latest/index.html)
@@ -293,7 +293,3 @@ Contributions welcome! Areas to expand:
 - [Docker Documentation](https://docs.docker.com/)
 
 ---
-
-## ⭐ Star this repo if it helped you land an internship or job!
-
-**Built for aspiring ML Engineers in Finance & FinTech** 💼
