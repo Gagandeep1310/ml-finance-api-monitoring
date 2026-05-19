@@ -1,0 +1,71 @@
+{
+  "dashboard": {
+    "title": "ML API Monitoring Dashboard",
+    "tags": ["ml", "fraud-detection", "api"],
+    "timezone": "browser",
+    "schemaVersion": 16,
+    "refresh": "5s",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Total Predictions",
+        "type": "stat",
+        "gridPos": {"h": 8, "w": 6, "x": 0, "y": 0},
+        "targets": [
+          {
+            "expr": "sum(ml_predictions_total)",
+            "legendFormat": "Total"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Fraud Detection Rate",
+        "type": "stat",
+        "gridPos": {"h": 8, "w": 6, "x": 6, "y": 0},
+        "targets": [
+          {
+            "expr": "sum(ml_predictions_total{prediction_class=\"1\"}) / sum(ml_predictions_total) * 100",
+            "legendFormat": "Fraud %"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Predictions per Second",
+        "type": "graph",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+        "targets": [
+          {
+            "expr": "rate(ml_predictions_total[1m])",
+            "legendFormat": "{{prediction_class}}"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Model Latency (p95)",
+        "type": "graph",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(ml_model_inference_latency_seconds_bucket[5m]))",
+            "legendFormat": "p95 latency"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Fraud Probability Distribution",
+        "type": "graph",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8},
+        "targets": [
+          {
+            "expr": "rate(ml_fraud_probability_bucket[5m])",
+            "legendFormat": "{{le}}"
+          }
+        ]
+      }
+    ]
+  }
+}
